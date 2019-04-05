@@ -12,6 +12,10 @@ app.use(bodyParser.json());
 
 app.use('/api', router);
 
+app.use('/', (req, res) => {
+    res.send("Api work...");
+});
+
 app.listen(port, () => {
     console.log(`Server running on ${port}...`);
 });
